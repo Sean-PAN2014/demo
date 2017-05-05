@@ -1,12 +1,14 @@
 package demo.util.vo;
 
 import java.util.List;
+import java.util.Map;
 
 public class Person {
 	private String name;
 	private int age;
 	private Address address;
-	private List<PhoneNumber> phoneNumbers;
+	private List<String> nickNames;
+	private Map<String, PhoneNumber> phoneNumberMap;
 
 	public Person() {
 	}
@@ -24,12 +26,21 @@ public class Person {
 		this.address = address;
 	}
 
-	public Person(String name, int age, Address address, List<PhoneNumber> phoneNumbers) {
+	public Person(String name, int age, Address address, List<String> nickNames) {
 		super();
 		this.name = name;
 		this.age = age;
 		this.address = address;
-		this.setPhoneNumbers(phoneNumbers);
+		this.nickNames = nickNames;
+	}
+
+	public Person(String name, int age, Address address, List<String> nickNames, Map<String, PhoneNumber> phoneNumberMap) {
+		super();
+		this.name = name;
+		this.age = age;
+		this.address = address;
+		this.nickNames = nickNames;
+		this.phoneNumberMap = phoneNumberMap;
 	}
 
 	@Override
@@ -41,8 +52,10 @@ public class Person {
 		builder.append(age);
 		builder.append(", address=");
 		builder.append(address);
-		builder.append(", phoneNumbers=");
-		builder.append(phoneNumbers);
+		builder.append(", nickNames=");
+		builder.append(nickNames);
+		builder.append(", phoneNumberMap=");
+		builder.append(phoneNumberMap);
 		builder.append("]");
 		return builder.toString();
 	}
@@ -71,12 +84,21 @@ public class Person {
 		this.address = address;
 	}
 
-	public List<PhoneNumber> getPhoneNumbers() {
-		return phoneNumbers;
+	public List<String> getNickNames() {
+		return nickNames;
 	}
 
-	public void setPhoneNumbers(List<PhoneNumber> phoneNumbers) {
-		this.phoneNumbers = phoneNumbers;
+	public void setNickNames(List<String> nickNames) {
+		this.nickNames = nickNames;
+	}
+
+	public Map<String, PhoneNumber> getPhoneNumberMap() {
+		return phoneNumberMap;
+	}
+
+	public void setPhoneNumberMap(Map<String, PhoneNumber> phoneNumberMap) {
+		System.out.println("to setPhoneNumberMap");
+		this.phoneNumberMap = phoneNumberMap;
 	}
 
 }
