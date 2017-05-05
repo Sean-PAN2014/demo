@@ -1,4 +1,4 @@
-package demo.util.vo;
+package demo.util.bo;
 
 public class Address {
 	private String city;

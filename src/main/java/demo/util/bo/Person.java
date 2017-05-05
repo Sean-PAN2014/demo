@@ -1,4 +1,4 @@
-package demo.util.vo;
+package demo.util.bo;
 
 import java.util.List;
 import java.util.Map;

@@ -6,7 +6,7 @@ import org.apache.commons.collections4.CollectionUtils;
 
 import com.google.common.collect.Lists;
 
-import demo.util.vo.Person;
+import demo.util.bo.Person;
 
 public class ApacheTransform {
 

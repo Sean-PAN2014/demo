@@ -3,7 +3,7 @@ package demo.propertydescriptor;
 import java.beans.IntrospectionException;
 import java.beans.PropertyDescriptor;
 
-import demo.util.vo.Person;
+import demo.util.bo.Person;
 
 public class PdExample {
 

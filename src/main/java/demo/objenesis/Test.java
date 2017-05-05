@@ -3,7 +3,7 @@ package demo.objenesis;
 import org.objenesis.Objenesis;
 import org.objenesis.ObjenesisStd;
 
-import demo.util.vo.Person;
+import demo.util.bo.Person;
 
 public class Test {
 	

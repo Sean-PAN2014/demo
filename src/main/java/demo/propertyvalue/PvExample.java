@@ -9,8 +9,8 @@ import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
-import demo.util.vo.Address;
-import demo.util.vo.Person;
+import demo.util.bo.Address;
+import demo.util.bo.Person;
 
 public class PvExample {
 
