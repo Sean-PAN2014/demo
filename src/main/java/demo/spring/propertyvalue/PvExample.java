@@ -1,4 +1,4 @@
-package demo.propertyvalue;
+package demo.spring.propertyvalue;
 
 import java.util.List;
 
