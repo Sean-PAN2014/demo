@@ -1,4 +1,4 @@
-package demo.jsr349.validator;
+package demo.beanvalidation;
 
 import java.util.Set;
 
