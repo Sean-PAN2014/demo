@@ -1,11 +1,11 @@
-package demo;
+package demo.spring.resource;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 import org.springframework.core.io.UrlResource;
 
-public class Test {
+public class UrlResourceExample {
 
 	public static void main(String[] args) throws Exception {
 		// 
