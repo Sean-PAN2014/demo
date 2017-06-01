@@ -30,8 +30,6 @@ public class JpaApplication {
 			log.info("Customers found with findAll():");
 			log.info("-------------------------------");
 			for (Customer customer : repository.findAll()) {
-				customer.setLastName("haha");
-				repository.save(customer);
 				log.info(customer.toString());
 			}
 			log.info("");

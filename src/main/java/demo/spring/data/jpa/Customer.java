@@ -7,14 +7,16 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
-@Entity(name = "customer")
+@Entity
+@Table(name="`Customer`", catalog="dbtest")
 public class Customer {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	@Column()
+	@Column
 	private String firstName;
 	@Column(length = 23)
 	private String lastName;
