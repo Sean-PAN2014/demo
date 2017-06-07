@@ -1,5 +1,7 @@
 package demo.spring.social.twitter;
 
+import java.util.Date;
+
 import org.springframework.social.twitter.api.Twitter;
 import org.springframework.social.twitter.api.impl.TwitterTemplate;
 
@@ -18,12 +20,7 @@ public class TwitterDemo {
 	}
 
 	private static String message() {
-		StringBuilder sb = new StringBuilder();
-		sb.append("指標発表結果。13:30 [AUD] 豪準備銀行（中央銀行）、政策金利発表(前回結果:1.50％ 予想:1.50％ 結果:1.50％)").append(System.lineSeparator());
-		// http://min-fx.jp/market/indicators/
-		// http://bit.ly/c3xlcP
-		sb.append("http://bit.ly/c3xlcP  #fx #kawase");
-		return sb.toString();
+		return String.format("Hello World! time=%s", new Date());
 	}
 
 }
