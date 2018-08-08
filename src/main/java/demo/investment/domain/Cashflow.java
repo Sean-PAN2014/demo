@@ -13,10 +13,10 @@ import lombok.NoArgsConstructor;
 public class Cashflow {
 
 	private double principal;
-	private LocalDate start;
+	private LocalDate date;
 
 	public double getDayMoney(LocalDate end) {
-		long days = ChronoUnit.DAYS.between(start, end);
+		long days = ChronoUnit.DAYS.between(date, end);
 		return days * principal;
 	}
 
