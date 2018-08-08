@@ -7,12 +7,13 @@ import demo.investment.domain.Account;
 import demo.investment.domain.Cashflow;
 
 public class Accounts {
+	public static final double FX_RATE = 6.828;
 
 	public static Account fundFranklin() {
 		Account account = new Account();
 		account.setName("富兰克林");
 		List<Cashflow> cashflows = account.getCashflows();
-		cashflows.add(new Cashflow(25000, LocalDate.parse("2016-12-20")));
+		cashflows.add(new Cashflow(25000 * FX_RATE, LocalDate.parse("2016-12-20")));
 		return account;
 	}
 

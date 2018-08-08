@@ -12,17 +12,19 @@ public class Account {
 	private final List<Cashflow> cashflows = new ArrayList<>();
 
 	public double getAvgDays(LocalDate end) {
-		return this.getDayCash(end) / this.getPrincipal();
+		return this.getDayCash(end) / this.getPrincipal(end);
 	}
 
 	public double getDayCash(LocalDate end) {
 		return cashflows.stream()//
+			.filter(cashflow -> !cashflow.getDate().isAfter(end))//
 			.mapToDouble(e -> e.getDayMoney(end))//
 			.sum();
 	}
 
-	public double getPrincipal() {
+	public double getPrincipal(LocalDate end) {
 		return cashflows.stream()//
+			.filter(cashflow -> !cashflow.getDate().isAfter(end))//
 			.mapToDouble(e -> e.getPrincipal())//
 			.sum();
 	}

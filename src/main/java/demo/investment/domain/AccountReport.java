@@ -1,31 +1,38 @@
 package demo.investment.domain;
 
-public interface AccountReport {
+import lombok.Data;
 
-	String getName();
+@Data
+public class AccountReport {
+	private Account account;
+	private Cashflow earning;
 
-	double getInterest();
+	public double getInterest() {
+		return earning.getPrincipal();
+	}
 
-	double getPrincipal();
+	public double getPrincipal() {
+		return account.getPrincipal(earning.getDate());
+	}
 
-	default long getDays() {
+	public long getDays() {
 		return (long) this.getAvgDays();
 	}
 
-	default double getAvgDays() {
-		return this.getDays();
+	public double getAvgDays() {
+		return account.getAvgDays(earning.getDate());
 	}
 
-	default double getReturn() {
+	public double getReturn() {
 		return this.getInterest() / this.getPrincipal();
 	}
 
-	default double getAnnualReturn() {
+	public double getAnnualReturn() {
 		return this.getInterest() * 365 / (this.getPrincipal() * this.getAvgDays());
 	}
 
-	default String getSummary() {
-		return String.format("%s - 年化收益%.2f%%(平均持有天数%s/金额%s,总收益%.2f%%)", this.getName(), this.getAnnualReturn() * 100, this.getDays(), this.getPrincipal(), this.getReturn() * 100);
+	public String getSummary() {
+		return String.format("%s - 年化收益%.2f%%(平均持有天数%s/金额%s,总收益%.2f%%)", account.getName(), this.getAnnualReturn() * 100, this.getDays(), this.getPrincipal(), this.getReturn() * 100);
 	}
 
 }
