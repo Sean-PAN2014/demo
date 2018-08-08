@@ -7,6 +7,8 @@ public class Calculator {
 	public static void main(String[] args) {
 		Report report = Reports.dueTo20180228();
 		System.out.println(report.getSummary());
+		report = Reports.dueTo20180807();
+		System.out.println(report.getSummary());
 	}
 
 }
