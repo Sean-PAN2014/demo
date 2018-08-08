@@ -22,7 +22,7 @@ public class Calculator1 {
 		MultidayInvest multidayInvest = new MultidayInvest();
 		multidayInvest.setInterest(500);
 		multidayInvest.setEnd(END);
-		List<Cashflow> cashflows = multidayInvest.getCashflowList().getCashflows();
+		List<Cashflow> cashflows = multidayInvest.getAccount().getCashflows();
 		cashflows.add(new Cashflow(15_000, LocalDate.parse("2017-02-28")));
 		cashflows.add(new Cashflow(-5_000, LocalDate.parse("2017-02-28")));
 		return multidayInvest;

@@ -29,7 +29,7 @@ public class Invests2 {
 		multidayInvest.setName("农行基金");
 		multidayInvest.setInterest(-8398.88);
 		multidayInvest.setEnd(END);
-		List<Cashflow> cashflows = multidayInvest.getCashflowList().getCashflows();
+		List<Cashflow> cashflows = multidayInvest.getAccount().getCashflows();
 		cashflows.add(new Cashflow(50000, LocalDate.parse("2017-11-17")));
 		cashflows.add(new Cashflow(50000, LocalDate.parse("2018-06-12")));
 		return multidayInvest;
@@ -40,7 +40,7 @@ public class Invests2 {
 		multidayInvest.setName("长江证券");
 		multidayInvest.setInterest(-15752.28);
 		multidayInvest.setEnd(END);
-		List<Cashflow> cashflows = multidayInvest.getCashflowList().getCashflows();
+		List<Cashflow> cashflows = multidayInvest.getAccount().getCashflows();
 		cashflows.add(new Cashflow(20_000, LocalDate.parse("2017-09-12")));
 		cashflows.add(new Cashflow(20_000, LocalDate.parse("2017-09-13")));
 		cashflows.add(new Cashflow(20_000, LocalDate.parse("2017-09-14")));
@@ -60,7 +60,7 @@ public class Invests2 {
 		multidayInvest.setName("蚂蚁金服");
 		multidayInvest.setInterest(6134.73);
 		multidayInvest.setEnd(END);
-		List<Cashflow> cashflows = multidayInvest.getCashflowList().getCashflows();
+		List<Cashflow> cashflows = multidayInvest.getAccount().getCashflows();
 		cashflows.add(new Cashflow(20_000, LocalDate.parse("2018-02-06")));
 		cashflows.add(new Cashflow(10_000, LocalDate.parse("2018-03-01")));
 		cashflows.add(new Cashflow(10_000, LocalDate.parse("2018-03-02")));

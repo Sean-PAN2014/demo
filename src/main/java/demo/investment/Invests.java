@@ -37,7 +37,7 @@ public class Invests {
 		multidayInvest.setName("长江证券");
 		multidayInvest.setInterest(1728.30);
 		multidayInvest.setEnd(END);
-		List<Cashflow> cashflows = multidayInvest.getCashflowList().getCashflows();
+		List<Cashflow> cashflows = multidayInvest.getAccount().getCashflows();
 		cashflows.add(new Cashflow(20_000, LocalDate.parse("2017-09-12")));
 		cashflows.add(new Cashflow(20_000, LocalDate.parse("2017-09-13")));
 		cashflows.add(new Cashflow(20_000, LocalDate.parse("2017-09-14")));

@@ -7,7 +7,8 @@ import java.util.List;
 import lombok.Data;
 
 @Data
-public class CashflowList {
+public class Account {
+	private String name;
 	private final List<Cashflow> cashflows = new ArrayList<>();
 
 	public double getAvgDays(LocalDate end) {
@@ -25,4 +26,5 @@ public class CashflowList {
 			.mapToDouble(e -> e.getPrincipal())//
 			.sum();
 	}
+
 }

@@ -11,18 +11,18 @@ import lombok.ToString;
 @EqualsAndHashCode(callSuper = true)
 public class MultidayInvest extends AbstractInvest {
 
-	private final CashflowList cashflowList = new CashflowList();
+	private final Account account = new Account();
 	private double interest;
 	private LocalDate end = LocalDate.now();
 
 	@Override
 	public double getPrincipal() {
-		return cashflowList.getPrincipal();
+		return account.getPrincipal();
 	}
 
 	@Override
 	public double getAvgDays() {
-		return cashflowList.getAvgDays(end);
+		return account.getAvgDays(end);
 	}
 
 }

@@ -1,6 +1,6 @@
 package demo.investment.domain;
 
-public interface Invest {
+public interface AccountReport {
 
 	String getName();
 
